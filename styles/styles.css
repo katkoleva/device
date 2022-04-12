@@ -2,7 +2,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik-400.woff2") format("woff2");
+  src: url("../fonts/rubic/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -11,7 +11,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/rubik-700.woff2") format("woff2");
+  src: url("../fonts/rubic/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -19,10 +19,228 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/raleway-800.woff2") format("woff2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
-body {
+*::after, *::before {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Rubic", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100%;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.header-container {
+  position: relative;
+  background-color: #ffe17f;
+  color: #000000;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 43px 60px 136px;
+}
+
+.header-logo {
+  display: block;
+  position: absolute;
+  top: -20px;
+}
+
+.header-container_form_navigation-user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header-form {
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  width: 517px;
+  height: 40px;
+}
+
+.header-form_field {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 10px 0 10px 48px;
+  color: #000000;
+  border-radius: 50px 0 0 50px;
+  width: 359px;
+}
+
+.header-form_button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-left: none;
+  padding: 10px 56px;
+  color: #000000;
+  border-radius: 0 50px 50px 0;
+  width: 160px;
+}
+
+.navigation-user {
+  display: flex;
+  list-style: none;
+}
+
+.navigation-user_link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header-container_catalog_navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-catalog_link {
+  position: relative;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-catalog_link_text {
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.header-catalog_link_icon {
+  position: absolute;
+  right: -65px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.header-catalog_link_icon::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-catalog_link_icon::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-catalog_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-catalog_sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*position: absolute;
+  width: 100%;*/
+}
+
+.navigation_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation_link {
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-catalog_sub-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* секция catalog-index */
+
+.catalog-index_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-index_item {
+  width: 160px;
+  height: 253px;
+}
+
+.catalog-index_item_link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* секция services */
+
+.services_container {
+  display: flex;
+  justify-content: center;
+}
+
+.services_list {
+  width: 287px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services_sub_container {
+  width: 873px;
+}
+
+.services-button {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-text_title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
 }

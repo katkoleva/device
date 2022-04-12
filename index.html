@@ -8,44 +8,82 @@
   <body>
     <header class="main-header">
       <!--Шапка сайта-->
-      <img class="header-logo" src="images/header-logo.svg" width="145" height="36" alt="Логотип Девайс.">
+      <div class="header-container">
+        <img class="header-logo" src="images/header-logo.svg" width="145" height="36" alt="Логотип Девайс.">
 
-      <form class="header-form" action="#" method="post">
-        <!--форма поиска-->
-        <input type="search" placeholder="Текст поиска">
-        <button type="submit">Найти</button>
-      </form>
+        <div class="header-container_form_navigation-user">
+          <form class="header-form" action="#" method="post">
+            <!--форма поиска-->
+            <input class="header-form_field" type="search" placeholder="Текст поиска">
+            <button class ="header-form_button" type="submit">Найти</button>
+          </form>
+          <ul class="navigation-user">
+            <!--Пользовательское меню, ссылка для входа пользователя-->
+            <li class="navigation-user_item">
+              <a class="navigation-user_link" href="#">Войти</a>
+            </li>
+            <li class="navigation-user_item">
+              <a class="navigation-user_link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-user_item">
+              <a class="navigation-user_link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
 
-      <ul class="navigation-user">
-        <!--Пользовательское меню, ссылка для входа пользователя-->
-        <li class="navigation-user_item">
-          <a class="navigation-user_link" href="#">Войти</a>
-        </li>
-        <li class="navigation-user_item">
-          <a class="navigation-user_link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-user_item">
-          <a class="navigation-user_link" href="#">Корзина</a>
-        </li>
-      </ul>
-
-      <a class="header-catalog_link" href="catalog.html">Каталог товаров</a>
-      <!--Раскрывающийся список каталога-->
-
-      <nav class="navigation">
-        <!--Навигация по сайту-->
-        <ul class="navigation_list">
-          <li class="navigation_item">
-            <a class="navigation_link" href="delivery.html">Доставка</a>
+        <div class="header-container_catalog_navigation">
+          <a class="header-catalog_link" href="catalog.html">
+            <span class="header-catalog_link_text">Каталог товаров</span>
+            <span class="header-catalog_link_icon" area-label="Кнопка открытия списка"></span>
+          </a>
+          <nav class="navigation">
+            <!--Навигация по сайту-->
+            <ul class="navigation_list">
+              <li class="navigation_item">
+                <a class="navigation_link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="navigation_item">
+                <a class="navigation_link" href="warranty.html">Гарантия</a>
+              </li>
+              <li class="navigation_item">
+                <a class="navigation_link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="header-catalog_list">
+          <li class="header-catalog_item">
+            <ul class="header-catalog_sub-list">
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
           </li>
-          <li class="navigation_listitem">
-            <a class="navigation_link" href="warranty.html">Гарантия</a>
+          <li class="header-catalog_item">
+            <ul class="header-catalog_sub-list">
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Умные часы</a>
+              </li>
+            </ul>
           </li>
-          <li class="navigation_item">
-            <a class="navigation_link" href="contacts.html">Контакты</a>
+          <li class="header-catalog_item">
+            <ul class="header-catalog_sub-list">
+              <li class="header-catalog_sub-item">
+                <a class="header-catalog_sub-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main class="main-index">
@@ -69,7 +107,6 @@
           </tr>
         </table>
       </section>
-
       <section class="catalog-index">
         <h2 class="catalog-index_title visually-hidden">Каталог товаров на главной</h2>
         <ul class="catalog-index_list">
@@ -111,31 +148,32 @@
           </li>
         </ul>
       </section>
-
       <section class="services">
         <h2 class="services_title visually-hidden">Услуги</h2>
-        <ul class="services_list">
-          <li class="services_item">
-            <a class="services_item_link" href="delivery.html">Доставка</a>
-          </li>
-          <li class="services_item">
-            <a class="services_item_link" href="warranty.html">Гарантия</a>
-          </li>
-          <li class="services_item">
-            <a class="services_item_link" href="credit.html">Кредит</a>
-          </li>
-        </ul>
-        <h2 class="services-text_title">Доставка</h2>
-        <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <div class="services_container">
+          <ul class="services_list">
+            <li class="services_item">
+              <button class="services-button" type="button">Доставка</button>
+            </li>
+            <li class="services_item">
+              <button class="services-button" type="button">Гарантия</button>
+            </li>
+            <li class="services_item">
+              <button class="services-button" type="button">Кредит</button>
+            </li>
+          </ul>
+          <div class="services_sub_container">
+            <h2 class="services-text_title">Доставка</h2>
+            <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
+        </div>
       </section>
-
       <section class="delivery">
         <h2 class="delivery_title visually-hidden">Доставка</h2>
         <a class="delivery_link" href="delivery.html"></a>
         <a class="delivery_link" href="delivery.html">Доставим редкий товар под заказ</a>
         <a class="delivery_link" href="delivery.html"></a>
       </section>
-
       <section class="company">
         <h2 class="company_title visually-hidden">О компании</h2>
         <div class="company-about">
@@ -144,13 +182,13 @@
           <p class="company-about_text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
           <ul class="company-about_list">
             <li>
-              <a class="company-about_list_link" href="chok-lines.html">Меловые линии</a>
+              <p>Меловые линии</p>
             </li>
             <li>
-              <a class="company-about_list_link" href="sdik.html">СДИК</a>
+              <p>СДИК</p>
             </li>
             <li>
-              <a class="company-about_list_link" href="toksberry.html">ТоксБерри</a>
+              <p>ТоксБерри</p>
             </li>
           </ul>
           <a class="company-about_link" href="about.html">Подробнее о нас</a>
@@ -170,7 +208,6 @@
           </address>
         </div>
       </section>
-
       <section class="subscribe">
         <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
         <p class="subscribe_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
