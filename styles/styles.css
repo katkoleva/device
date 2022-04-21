@@ -23,7 +23,7 @@
   font-display: swap;
 }
 
-*::*::after, *::before {
+**::after, *::before {
   box-sizing: border-box;
 }
 
@@ -37,6 +37,17 @@ body {
   min-height: 100%;
   margin: 0;
   padding-top: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .text-color-grey {
@@ -220,6 +231,43 @@ body {
 
 /* секция product-promo */
 
+.product-promo {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  outline: 2px solid blue;
+}
+
+.product-promo_img {
+  width: 560px;
+  outline: 1px solid red;
+}
+
+.container_product-promo {
+  width: 560px;
+  margin-bottom: 38px;
+  outline: 1px solid green;
+}
+
+.product-promo_text {
+  margin: 0;
+  outline: 1px solid red;
+}
+
+.product-promo_text,
+.bold {
+  margin-bottom: 29px;
+}
+
+.product-promo_text,
+.text-color-grey {
+  margin-bottom: 67px;
+}
+
+.product-promo_link {
+  /* margin-bottom: 59px; */
+}
 
 .product-promo_data {
   font-size: 36px;
@@ -287,6 +335,27 @@ body {
 
 /* секция company */
 
+.company {
+  display: flex;
+  outline: 2px solid blue;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom:  70px;
+}
+
+.company-about {
+  width: 520px;
+  outline: 1px solid lightblue;
+  padding: 47px 23px 10px 0;
+}
+
+.company-contacts {
+  width: 532px;
+  outline: 1px solid pink;
+  padding: 47px 23px 10px 0;
+}
+
 .company-about_list {
   margin: 0;
   padding: 0;
@@ -311,9 +380,42 @@ body {
 
 /* секция subscribe */
 
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  padding-top: 74px;
+  align-items: flex-start;
+  outline: 2px solid grey;
+}
+
+.subscribe_title {
+  outline: 1px solid blue;
+  width: 348px;
+  margin: 0;
+  margin-bottom: 157px;
+}
+
+.subscribe_text {
+  outline: 1px solid green;
+  width: 560px;
+  margin: 0;
+  margin-bottom: 157px;
+}
+
 .subscribe-form {
   display: flex;
   width: 810px;
+  outline: 1px solid red;
+  margin-bottom: 59px;
+}
+
+.subscribe-text2 {
+  outline: 1px solid green;
+  width: 160px;
+  margin-bottom: 70px;
 }
 
 .subscribe-form_field {
