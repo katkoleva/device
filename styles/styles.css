@@ -266,16 +266,26 @@ body {
 }
 
 .product-promo_link {
-  /* margin-bottom: 59px; */
+
+}
+
+.product-promo-list {
+  margin: 0;
+  margin-top: 59px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
 }
 
 .product-promo_data {
   font-size: 36px;
   line-height: 30px;
+
 }
 .product-promo_characteristics {
   font-size: 16px;
   line-height: 30px;
+  margin: 0;
 }
 
 
